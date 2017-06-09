@@ -1,0 +1,21 @@
+@import "init";
+
+$base_size:20px;
+
+@mixin super {
+
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+@function column-width($cols){
+
+  @return $cols+1px;
+}
+
+h1 {
+  font-size: $base_size;
+  color:red;
+  @include super;
+  width: column-width(3);
+}
